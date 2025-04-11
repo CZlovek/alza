@@ -1,0 +1,25 @@
+﻿{
+  "Exchanges": [
+    {
+      "ExchangeName": "Alza.Shop.Exchange",
+      "Type": "direct",
+      "Durable": true,
+      "AutoDelete": false
+    }
+  ],
+  "Queues": [
+    {
+      "QueueName": "Alza.Shop.Commands.Update",
+      "Durable": true,
+      "Exclusive": false,
+      "AutoDelete": false    
+    }
+  ],
+  "Bindings": [
+    {
+      "QueueName": "Alza.Shop.Commands.Update",
+      "ExchangeName": "Alza.Shop.Exchange",
+      "RoutingKey": "Alza.Shop.Commands.Update"
+    }
+  ]
+}
